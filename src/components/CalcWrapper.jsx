@@ -20,7 +20,7 @@ export const CalcWrapper = () => {
         const tipAmount = Math.trunc(tip * 100) / 100
         const total = (bill / people + tip).toFixed(2)
         const resetEnabled = bill || people || rate || customRate
-        if (bill && people && (rate || customRate) && !error) {
+        if (bill && parseInt(people) && (rate || customRate) && !error) {
             return {
                 tipAmount,
                 total,
