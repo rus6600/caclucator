@@ -6,12 +6,12 @@
     --clr-light-gray-cyan: hsl(185, 41%, 84%);
     --clr-sup-light-gray-cyan: hsl(189, 41%, 97%);
     --clr-white: hsl(0, 0%, 100%);
-    --clr-warning: #CB9787;
+    --clr-warning: #cb9787;
     --fz-300: 1.5rem;
 }
 
 @font-face {
-    font-family: 'Space Mono';
+    font-family: 'Space Mono Sans-serif';
     src: url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap')
         format('truetype');
 }
@@ -108,6 +108,22 @@ h2 {
     background-color: var(--clr-white);
 }
 
+.wrapper::after {
+    position: absolute;
+    top: -10rem;
+    right: 50%;
+    letter-spacing: 1rem;
+    transform: translateX(50%);
+    display: block;
+    white-space: pre;
+    font-size: 2rem;
+    color: var(--clr-dark-grey-cyan);
+    font-weight: 600;
+    content: 'SPLI \00000ATTER';
+    clear: right;
+
+}
+
 .inputs {
     display: flex;
     padding-block: 1rem;
@@ -133,7 +149,6 @@ h2 {
     background-color: var(--clr-sup-light-gray-cyan);
     color: var(---clr-dark-cyan);
     text-align: right;
-    /*color: var(--clr-gray-cyan);*/
 }
 
 .input::placeholder {
@@ -205,16 +220,11 @@ label:before {
     gap: 1rem;
 }
 
-.bill {
-}
-
 .btn {
     padding: 0.5rem 2rem;
     font-weight: 600;
     border-radius: 0.5rem;
     border: none;
-    /*background-color: var(---clr-dark-cyan);*/
-    /*color: var(--clr-white);*/
 }
 
 .btn:hover {
@@ -226,7 +236,12 @@ label:before {
 }
 
 .btn-disabled {
+    margin-top: auto;
     opacity: 0.1;
+}
+
+.btn-disabled:hover {
+    background-color: var(--clr-light-gray-cyan);
 }
 
 .btn-reset {
@@ -254,8 +269,6 @@ label:before {
     color: var(---clr-dark-cyan);
 }
 
-
-
 .summary {
     display: flex;
     flex-direction: column;
@@ -273,7 +286,7 @@ label:before {
 
 .summary-info > *:nth-child(1) {
     grid-area: 1/1/2/2;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
     color: var(--clr-white);
 }
@@ -295,14 +308,3 @@ label:before {
     display: flex;
     justify-content: space-between;
 }
-
-.mt-top {
-    margin-top: auto;
-}
-
-/*.wrapper::before {*/
-/*    position: absolute;*/
-/*    content: 'SPLITTER';*/
-/*    left: 50%;*/
-/*    margin-left: -5px;*/
-/*}*/

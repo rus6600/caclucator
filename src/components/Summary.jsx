@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Summary = ({ reset, tipAmount, total }) => {
+export const Summary = ({ reset, tipAmount, total, resetEnabled }) => {
     return (
         <div className="summary">
             <div className="summary-info">
@@ -14,7 +14,9 @@ export const Summary = ({ reset, tipAmount, total }) => {
                 <h1>${total}</h1>
             </div>
             <button
-                className={`btn btn-reset ${!total && 'btn-disabled'}`}
+                className={`btn ${
+                    resetEnabled ? 'btn-reset ' : 'btn-disabled'
+                }`}
                 onClick={reset}
             >
                 RESET

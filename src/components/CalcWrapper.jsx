@@ -10,23 +10,27 @@ export const CalcWrapper = () => {
         error: false,
         bill: '',
         rate: '',
+        customRate: '',
         people: '',
     })
 
     const getResultSums = () => {
-        const { bill, people, rate, error } = state
-        const tip = ((bill / people) * rate) / 100
+        const { bill, people, rate, customRate, error } = state
+        const tip = ((bill / people) * (rate || customRate)) / 100
         const tipAmount = Math.trunc(tip * 100) / 100
         const total = (bill / people + tip).toFixed(2)
-        if (bill && people && rate && !error) {
+        const resetEnabled = bill || people || rate || customRate
+        if (bill && people && (rate || customRate) && !error) {
             return {
                 tipAmount,
                 total,
+                resetEnabled,
             }
         }
         return {
             tipAmount: 0,
             total: 0,
+            resetEnabled,
         }
     }
 
@@ -60,6 +64,7 @@ export const CalcWrapper = () => {
                 error: false,
                 bill: '',
                 rate: '',
+                customRate: '',
                 people: '',
             }
         })

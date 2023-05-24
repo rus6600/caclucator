@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Inputs = ({
     rates,
-    state: { bill, rate, people, error },
+    state: { bill, rate, customRate, people, error },
     inputHandler,
 }) => {
     return (
@@ -33,14 +33,22 @@ export const Inputs = ({
                             className={`btn ${
                                 rate === item ? 'btn-selected' : 'btn-percent'
                             }`}
-                            onClick={() => inputHandler({ rate: item })}
+                            onClick={() =>
+                                inputHandler({ rate: item, customRate: '' })
+                            }
                         >{`${item}%`}</button>
                     ))}
                     <input
                         className="input input-custom border-primary"
                         type="number"
                         placeholder="Custom"
-                        onChange={(e) => inputHandler({ rate: e.target.value })}
+                        value={customRate}
+                        onChange={(e) =>
+                            inputHandler({
+                                rate: '',
+                                customRate: e.target.value,
+                            })
+                        }
                     />
                 </div>
             </div>
