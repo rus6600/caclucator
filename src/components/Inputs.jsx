@@ -11,7 +11,7 @@ export const Inputs = ({
                 <label className="label-text">Bill</label>
                 <label className="icon-dollar" htmlFor="bill">
                     <input
-                        className="input"
+                        className="input border-primary"
                         type="text"
                         id="bill"
                         placeholder="0"
