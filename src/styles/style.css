@@ -310,7 +310,7 @@ label:before {
     justify-content: space-between;
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 600px) {
     .container {
         width: 100%;
         margin-top: 6rem;
