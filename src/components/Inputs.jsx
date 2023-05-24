@@ -12,7 +12,7 @@ export const Inputs = ({
                 <label className="icon-dollar" htmlFor="bill">
                     <input
                         className="input border-primary"
-                        type="text"
+                        type="number"
                         id="bill"
                         placeholder="0"
                         value={bill}
