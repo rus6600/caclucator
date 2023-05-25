@@ -340,8 +340,9 @@ label:before {
     }
 
     .input-custom {
-        font-size: 1rem;
+        line-height: 1;
     }
+
     .summary {
         margin: 1rem;
         padding: 1rem;
