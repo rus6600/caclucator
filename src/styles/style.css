@@ -340,7 +340,7 @@ label:before {
     }
 
     .input-custom {
-        max-width: fit-content;
+        font-size: 1rem;
     }
     .summary {
         margin: 1rem;
