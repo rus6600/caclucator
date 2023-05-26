@@ -4,14 +4,18 @@ export const Summary = ({ reset, tipAmount, total, resetEnabled }) => {
     return (
         <div className="summary">
             <div className="summary-info">
-                <h3>Tip Amount</h3>
-                <p>/ person</p>
-                <h1>${tipAmount}</h1>
+                <div className="summary-text">
+                    <p>Tip Amount</p>
+                    <p>/ person</p>
+                </div>
+                <input readOnly value={`$${tipAmount}`} />
             </div>
             <div className="summary-info">
-                <h3>Total</h3>
-                <p>/ person</p>
-                <h1>${total}</h1>
+                <div className="summary-text">
+                    <p>Total</p>
+                    <p>/ person</p>
+                </div>
+                <input readOnly value={`$${total}`} />
             </div>
             <button
                 className={`btn ${
