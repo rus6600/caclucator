@@ -15,7 +15,8 @@ export const Inputs = ({
                         type="number"
                         id="bill"
                         placeholder="0"
-                        pattern="[0-9]+"
+                        pattern="\d*"
+                        inputMode="decimal"
                         value={bill}
                         onChange={(e) =>
                             inputHandler({
@@ -43,7 +44,8 @@ export const Inputs = ({
                         className="input input-custom border-primary"
                         type="number"
                         placeholder="Custom"
-                        pattern="[0-9]+"
+                        pattern="\d*"
+                        inputMode="decimal"
                         value={customRate}
                         onChange={(e) =>
                             inputHandler({
@@ -74,7 +76,8 @@ export const Inputs = ({
                         type="number"
                         id="people"
                         placeholder="0"
-                        pattern="[0-9]+"
+                        pattern="\d*"
+                        inputMode="decimal"
                         value={people}
                         onChange={(e) =>
                             inputHandler({
