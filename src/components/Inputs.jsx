@@ -15,10 +15,11 @@ export const Inputs = ({
                         type="number"
                         id="bill"
                         placeholder="0"
+                        pattern="[0-9]+"
                         value={bill}
                         onChange={(e) =>
                             inputHandler({
-                                bill: e.target.value,
+                                bill: e.target.value.replace(/[^0-9.]/g, ''),
                             })
                         }
                     />
@@ -42,11 +43,15 @@ export const Inputs = ({
                         className="input input-custom border-primary"
                         type="number"
                         placeholder="Custom"
+                        pattern="[0-9]+"
                         value={customRate}
                         onChange={(e) =>
                             inputHandler({
                                 rate: '',
-                                customRate: e.target.value,
+                                customRate: e.target.value.replace(
+                                    /[^0-9.]/g,
+                                    ''
+                                ),
                             })
                         }
                     />
@@ -69,10 +74,11 @@ export const Inputs = ({
                         type="number"
                         id="people"
                         placeholder="0"
+                        pattern="[0-9]+"
                         value={people}
                         onChange={(e) =>
                             inputHandler({
-                                people: e.target.value,
+                                people: e.target.value.replace(/[^0-9.]/g, ''),
                             })
                         }
                     />
